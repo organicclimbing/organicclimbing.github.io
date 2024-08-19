@@ -107,21 +107,21 @@
             </div>
             <div class="color-select">
                 Background Color:
-                <select name="mainColor" onchange="updateColor('MainColor', this.value)" class="color-list">
+                <select name="mainColor" onchange="updateColor('Color_0', this.value)" class="color-list">
                     <option value="" selected disabled hidden>Choose here</option>
 
                 </select>
             </div>
             <div class="color-select">
                 Accent Color 1:
-                <select name="color1" onchange="updateColor('Color2', this.value)" class="color-list">
+                <select name="color1" onchange="updateColor('Color_1', this.value)" class="color-list">
                     <option value="" selected disabled hidden>Choose here</option>
 
                 </select>
             </div>
             <div class="color-select">
                 Accent Color 2:
-                <select name="color2" onchange="updateColor('Color3', this.value)" class="color-list">
+                <select name="color2" onchange="updateColor('Color_2', this.value)" class="color-list">
                     <option value="" selected disabled hidden>Choose here</option>
                 </select>
             </div>
@@ -190,14 +190,14 @@
     var a = document.getElementById("mainSVG");
     var logo = "Classic Yellow.jpg"
     var colors = {
-        "MainColor": "#6d6e71",
-        "Color2": "#e6e7e8",
-        "Color3": "#231f20"
+        "Color_0": "#6d6e71",
+        "Color_1": "#e6e7e8",
+        "Color_2": "#231f20"
     }
     function updateLogo(newLogo) {
         var svgDoc = a.contentDocument;
         var logoElement = svgDoc.getElementById("Logo").children[0].children[0];
-        logoElement.setAttribute("xlink:href", "/Logos/" + newLogo)
+        logoElement.setAttribute("xlink:href", "/Images/Logos/" + newLogo)
         logo = newLogo;
     }
     function updateColor(elementId, newColor) {
